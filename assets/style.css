@@ -54,7 +54,6 @@ h3 {
 h1 {
     font-size: 80px;
     color: #186684;
-    padding: 10px;
 }
 h2 {
     color: #186684;
@@ -91,10 +90,11 @@ button {
 .text-box {
     float: left;
     width: 40%;
-    margin: 30px 0;
+    padding: 30px;
 }
 footer {
     background-color: #F4F4F4;
+
 }
 footer li {
     margin-top: 50px;
@@ -106,6 +106,7 @@ span {
 form {
     margin: 0 auto;
 }
+
 input[type=email] {
     padding: 10px;
 }
@@ -116,7 +117,6 @@ input[type=submit] {
     border: 3px #E85B26 solid;
     color: #F4F4F4;
     padding: 10px;
-    /* width: 100%; */
 }
 input[type=submit]:hover {
     background-color: rgb(15, 18, 228);
@@ -126,8 +126,8 @@ input[type=submit]:hover {
 .gram {
     float: left;
     position: relative;
-    margin: 2%;
     width: 28%;
+    margin: 2%;
 }
 .container-icon {
     background-image: url(image-5@2x.png);
@@ -169,13 +169,21 @@ input[type=submit]:hover {
     width: calc(40% - 4%);
     margin: 2%;
 }
-.main-content,
-.main-img {
+.part1 {
+    float: right;
+    width: 50%;
+}
+.part2 {
     float: left;
     width: 50%;
 }
 .main-content {
     padding: 50px;
+}
+.social-icon {
+    float: right;
+    top: 50%; 
+    left: 50%; 
 }
 .social-media {
     color: #E85B26;
@@ -184,41 +192,52 @@ input[type=submit]:hover {
 .social-media i {
     padding-bottom: 15px;
 }
-.social-icon {
-    float: right;
-    top: 50%; 
-    left: 50%; 
+header {
+    position: relative;
+
 }
 .greybox {
-    background-color: #F4F4F4;
-    opacity: 0.8;
-    float: right;
-    /* width: 30%; */
-    /* position: absolute; */
+    background-color: rgb(244,244,244, 0.8);
+    padding: 10px;
+    position: absolute;
+    left: 42%;
+    top: 40%;
 }
 
 /* // Media Query for Responsive Design // */
+/* @media (max-width: 1000px) {
+    img {
+        width: 100%;
+    }
+} */
 
 @media (max-width: 740px) {
-    header nav,
-    .social-icon{
-        display: none;
+    input[type=submit],
+    input[type=email] {
+        margin: 5px;
+        width: 80%;
     }
     input[type=email], button{
         text-align: center;
     }
+    p {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 70px;
+    }
+    .text-box {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
     .main-content,
     .main-img,
     .info-container,
     .photo-container {
-    width: 100%;
-    text-align: center;
-    }
-    .grey-box2 {
-        
-    }
-    .main-content .part2 {
-        float: right;
+        width: 100%;
+        text-align: center;
     }
     .gram {
         width: 45%;
@@ -226,20 +245,41 @@ input[type=submit]:hover {
     .team-gram .gram:nth-child(4) img{
         display: none;
     }
-    h1 {
-        font-size: 50px;
+    .container-icon {
+        height: 600px;
     }
-    .text-box {
-        float: none;
+    .grey-box2 .icon {
         width: 100%;
-        text-align: center;
+        font-size: 25px;
     }
 }
 
-@media (max-width: 390) {
+@media (max-width: 350px) {
+    h2,
+    h3 {
+        font-size: 20px;
+    }
+
     .footer-links {
         text-align: center;
         width: 100%;
     }
+    header nav,
+    .social-icon {
+        display: none;
+    }
+    input[type=submit],
+    input[type=email] {
+        margin: 5px;
+        width: 80%;
+    }
+    .grey-box2 .icon {
+        width: 100%;
+        font-size: 25px;
+    }
+    .icon span {
+        font-size: 20px;
+    }
+
 }
 
