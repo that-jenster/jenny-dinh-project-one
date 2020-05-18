@@ -10,15 +10,21 @@
 </head>
 <body>
     <header>
-        <div class="content-wrap"></div>
+        <div class="content-wrap">
         <button class="hamburger"><i class="fa fa-bars"></i></i><p class="sr-only">Click here to open up hamburger menu</p></button>
-        <nav>
-            <ul class="links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+        <nav class="menu-links">
+            <div class="full-screen">
+                <button class="exit-menu">
+                    <i class="fa fa-times"></i>
+                    <p class="sr-only">Click me to close the navigation.</p>
+                </button>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
         </nav>
         <div class="clearfix">
             <div class="social-icon">
@@ -30,7 +36,7 @@
                 </ul>
             </div>
             <div class="greybox">
-                <h1>Foot <br>Foward</h1>
+                <h1>Foot <br>Forward</h1>
             </div>
         </div>
     </header>
@@ -121,15 +127,31 @@
             <div class="text-box side2">
                 <h3>Stay updated</h3>
                 <p>Subscribe to our newsletter to stay updated.</p>
-                <form>
+                <div class="email-wrapper">
                     <input type="email" id="email" name="email" placeholder="email address">
                     <input type="submit" value="Subscribe">
-                </form>
+                </div>
             </div>
         </div>
         <div class="copyright">Copyright @ 2019 HackerYou
         </div>
     </footer>
 
+    <!-- // Load in Jquery  -->
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'>
+    </script>
+
+    <script>
+        $(function() {
+			$('.hamburger').click(function() {
+				$('.menu-links').addClass('show');
+			});
+
+			$('.exit-menu').click(function() {
+				// toggle class show on the menu
+				$('.menu-links').removeClass('show');
+			});
+		});
+    </script>
 </body>
 </html>
