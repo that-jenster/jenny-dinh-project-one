@@ -12,9 +12,6 @@ img {
 	display: block;
 	width: 100%;
 }
-header {
-	position: relative;
-}
 .wrapper {
 	max-width: 1300px;
 }
